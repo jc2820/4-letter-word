@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+    <head>
+        <title>4 Letter Word</title>
+        <style>
+
+            html, body {
+                width: 100%;
+                background-color: white;
+                padding:0;
+                margin:0;
+            }
+
+            p {
+                font-family: "lucida console", monospace;
+                color: navy;
+                font-size: 12px;
+                font-weight:100;
+                line-height:125%;
+                text-align: left;
+                margin:0;
+
+            }
+
+            a {
+                font-family: "lucida console", monospace;
+                font-size:12px;
+                font-weight:100;
+                line-height:125%;
+                text-decoration:none;
+                cursor:pointer;
+            }
+
+            a:link {color:navy; text-decoration:none;}
+            a:visited {color:navy; text-decoration:none;}
+            a:hover {color:#3D59AB; text-decoration:none;}
+            a:active {color:navy; text-decoration:none;}
+
+
+            ul {
+                list-style-type:none;
+                padding:0;
+                margin:0;
+            }
+
+            .links {
+                list-style-type:none;
+                padding:0;
+                margin-left:15px;
+            }
+
+
+            .logo {
+                font-family: "lucida console", monospace;
+                font-size: 30px;
+                font-weight:100;
+                text-align:center;
+                color: navy;
+            }
+
+            .container {
+                width: 100%;
+                background-color: white;
+                height:100%;
+                margin-top:50px;
+                min-height:100%;
+            }
+
+            header {
+                width:100%;
+                height:5%;
+                position: fixed;
+                top:0;
+                left:0;
+                background-color: white;
+                border:none;
+            }
+
+            .leftbox {
+                width:30%;
+                height:95%;
+                position:fixed;
+                top:5%;
+                left:0%;
+                background-color:white;
+                box-sizing: border-box;
+                padding-left:20px;
+                padding-top:20px;
+            }
+
+            .leftpara {
+                font-family: "lucida console", monospace;
+                color: navy;
+                font-size: 12px;
+                font-weight:100;
+                line-height:125%;
+                text-align: right;
+                margin:0;
+            }
+
+            .rightbox {
+                width:30%;
+                height:95%;
+                position:fixed;
+                top:5%;
+                right:0%;
+                background-color:white;
+                box-sizing: border-box;
+                padding-right:20px;
+                padding-top:20px;
+            }
+
+            .rightpara {
+                font-family: "lucida console", monospace;
+                color: navy;
+                font-size: 12px;
+                font-weight:100;
+                line-height:125%;
+                text-align: left;
+                margin:0;
+            }
+
+            .centralbox {
+                width:40%;
+                height:100%;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+                background-color:white;
+                padding:0px;
+            }
+
+            .topbox {
+                width:40%;
+                height:30%;
+                position:fixed;
+                top:5%;
+                left:30%;
+                background-color:white;
+            }
+
+            .bottombox {
+                width:40%;
+                height:30%;
+                position:fixed;
+                bottom:0%;
+                left:30%;
+                background-color:white;
+            }
+            .sliderbox {
+                width:40%;
+                height:40%;
+                position:fixed;
+                top:30%;
+                left:30%;
+                background-color:white;
+
+                box-sizing: border-box;
+            }
+
+            .slider {
+                width:25%;
+                height:100%;
+                display:block;
+                float:left;
+                border:0;
+                margin:0;
+                padding:0;
+            }
+
+
+
+
+
+
+
+
+        </style>
+    </head>
+
+    <body>
+
+  <!--      <header>
+            <button class="shuffle" onclick="randomLetter();">shuffle</button>
+
+
+        </header> -->
+
+        <div class="container">
+            <div class="leftbox">
+
+            </div>
+
+            <div class="centralbox">
+                <div class="topbox">
+
+                </div>
+
+                <div class="sliderbox">
+                    <script>
+
+                        var letters = [];
+                        letters[0] = "letters/a.png";
+                        letters[1] = "letters/b.png";
+                        letters[2] = "letters/c.png";
+                        letters[3] = "letters/d.png";
+                        letters[4] = "letters/e.png";
+                        letters[5] = "letters/f.png";
+                        letters[6] = "letters/g.png";
+                        letters[7] = "letters/h.png";
+                        letters[8] = "letters/i.png";
+                        letters[9] = "letters/j.png";
+                        letters[10] = "letters/k.png";
+                        letters[11] = "letters/l.png";
+                        letters[12] = "letters/m.png";
+                        letters[13] = "letters/n.png";
+                        letters[14] = "letters/o.png";
+                        letters[15] = "letters/p.png";
+                        letters[16] = "letters/q.png";
+                        letters[17] = "letters/r.png";
+                        letters[18] = "letters/s.png";
+                        letters[19] = "letters/t.png";
+                        letters[20] = "letters/u.png";
+                        letters[21] = "letters/v.png";
+                        letters[22] = "letters/w.png";
+                        letters[23] = "letters/x.png";
+                        letters[24] = "letters/y.png";
+                        letters[25] = "letters/z.png";
+
+                        const randomLetter = () => {
+                            letters.sort(function() {return .5 - Math.random();});
+                            document.slide1.src = letters[0];
+                            letters.sort(function() {return .5 - Math.random();});
+                            document.slide2.src = letters[0];
+                            letters.sort(function() {return .5 - Math.random();});
+                            document.slide3.src = letters[0];
+                            letters.sort(function() {return .5 - Math.random();});
+                            document.slide4.src = letters[0];
+
+
+                        }
+
+                        window.onload=randomLetter;
+                        var loop = setInterval(randomLetter, 3000);
+                        const pause = () => {clearInterval(loop)};
+
+                    </script>
+
+                    <img name="slide1" class="slider" alt="letter1">
+                    <img name="slide2" class="slider" alt="letter2">
+                    <img name="slide3" class="slider" alt="letter3">
+                    <img name="slide4" class="slider" alt="letter4">
+
+                </div>
+
+                <div class="bottombox">
+
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="rightbox">
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </body>
+</html>
