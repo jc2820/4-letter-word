@@ -19,5 +19,13 @@ There are some ways to alter this work for variety or context:
 * More or fewer letters.
 * Transition speed and style.
 
+The randomiser function in scripts.js randomises an array of the letter src links (one for each letter of the alphabet) and then allots the 0th index url to the first img element. 
+
+This happens four times in sequence - once for each letter in the word/img element on the page.
+
+It may be tidier to make the function wait for all the image srcs to be alloted before changing them on the page as one, but I quite like the glitchiness of the transition as it is.
+
+
+
 
 
